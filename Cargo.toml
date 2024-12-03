@@ -1,0 +1,30 @@
+[package]
+name = "bxinventory"
+version = "0.1.0"
+edition = "2021"
+build = "build.rs"
+license = "GPL-3.0-or-later"
+
+[dependencies]
+regex = "1.11.1"
+sonic-rs = "0.3.16 "
+serde = { version = "1.0.215", features = ["derive"] }
+dirs = "5.0.1"
+tokio-macros = { version = "2.4.0" }
+slint = { version = "1.8.0", default-features = false, features = [
+    "compat-1-2",
+    "std",
+    "gettext",
+] }
+slint-interpreter = "1.8.0"
+futures-util = "0.3.31"
+reqwest = { version = "0.12.9", features = ["stream"] }
+reqwest-streams = "0.8.2"
+tokio = { version = "1.41.1", features = ["full"] }
+filenamify = "0.1.2"
+image = "0.25.5"
+open = "5.3.1"
+
+[build-dependencies]
+slint-build = "1.8.0"
+winresource = "0.1.19"
